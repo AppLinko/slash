@@ -64,7 +64,7 @@ const PasswordAuthForm = () => {
         </div>
         <div className="w-full flex flex-col mb-2">
           <span className="leading-8 text-gray-600">{t("common.password")}</span>
-          <Input className="w-full py-3" type="password" value={password} placeholder="····" onChange={handlePasswordInputChanged} />
+          <Input className="w-full py-3" type="password" value={password} placeholder="输入你的密码..." onChange={handlePasswordInputChanged} />
         </div>
       </div>
       <div className="w-full flex flex-row justify-end items-center mt-4 space-x-2">
