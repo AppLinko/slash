@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/yourselfhosted/slash/server/profile"
-	"github.com/yourselfhosted/slash/store"
-	"github.com/yourselfhosted/slash/store/db"
-	"github.com/yourselfhosted/slash/test"
+	"github.com/AppLinko/slash/server/profile"
+	"github.com/AppLinko/slash/store"
+	"github.com/AppLinko/slash/store/db"
+	"github.com/AppLinko/slash/test"
 )
 
 func NewTestingStore(ctx context.Context, t *testing.T) *store.Store {

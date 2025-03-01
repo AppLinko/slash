@@ -8,8 +8,8 @@ import (
 	_ "github.com/lib/pq"
 	"github.com/pkg/errors"
 
-	"github.com/yourselfhosted/slash/server/profile"
-	"github.com/yourselfhosted/slash/store"
+	"github.com/AppLinko/slash/server/profile"
+	"github.com/AppLinko/slash/store"
 )
 
 type DB struct {

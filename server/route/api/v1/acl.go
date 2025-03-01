@@ -12,9 +12,9 @@ import (
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
 
-	"github.com/yourselfhosted/slash/internal/util"
-	storepb "github.com/yourselfhosted/slash/proto/gen/store"
-	"github.com/yourselfhosted/slash/store"
+	"github.com/AppLinko/slash/internal/util"
+	storepb "github.com/AppLinko/slash/proto/gen/store"
+	"github.com/AppLinko/slash/store"
 )
 
 // ContextKey is the key type of context value.

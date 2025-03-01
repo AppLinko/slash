@@ -12,11 +12,11 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/yourselfhosted/slash/server"
-	"github.com/yourselfhosted/slash/server/common"
-	"github.com/yourselfhosted/slash/server/profile"
-	"github.com/yourselfhosted/slash/store"
-	"github.com/yourselfhosted/slash/store/db"
+	"github.com/AppLinko/slash/server"
+	"github.com/AppLinko/slash/server/common"
+	"github.com/AppLinko/slash/server/profile"
+	"github.com/AppLinko/slash/store"
+	"github.com/AppLinko/slash/store/db"
 )
 
 const (

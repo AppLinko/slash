@@ -11,10 +11,10 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/reflection"
 
-	v1pb "github.com/yourselfhosted/slash/proto/gen/api/v1"
-	"github.com/yourselfhosted/slash/server/profile"
-	"github.com/yourselfhosted/slash/server/service/license"
-	"github.com/yourselfhosted/slash/store"
+	v1pb "github.com/AppLinko/slash/proto/gen/api/v1"
+	"github.com/AppLinko/slash/server/profile"
+	"github.com/AppLinko/slash/server/service/license"
+	"github.com/AppLinko/slash/store"
 )
 
 type APIV1Service struct {

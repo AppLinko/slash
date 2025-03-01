@@ -5,8 +5,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/yourselfhosted/slash/server/profile"
-	"github.com/yourselfhosted/slash/store"
+	"github.com/AppLinko/slash/server/profile"
+	"github.com/AppLinko/slash/store"
 )
 
 type Runner struct {
