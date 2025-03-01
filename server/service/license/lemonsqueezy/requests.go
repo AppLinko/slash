@@ -1,15 +1,5 @@
 package lemonsqueezy
 
-import (
-	"bytes"
-	"encoding/json"
-	"fmt"
-	"io"
-	"net/http"
-
-	"github.com/pkg/errors"
-)
-
 const (
 	// The base API URL for the Lemon Squeezy API.
 	baseAPIURL = "https://api.lemonsqueezy.com"
