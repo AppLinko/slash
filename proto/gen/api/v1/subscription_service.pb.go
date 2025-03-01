@@ -27,8 +27,8 @@ type PlanType int32
 const (
 	PlanType_PLAN_TYPE_UNSPECIFIED PlanType = 0
 	PlanType_FREE                  PlanType = 1
-	PlanType_PRO                   PlanType = 2
-	PlanType_ENTERPRISE            PlanType = 3
+	PlanType_PRO                   PlanType = 3
+	PlanType_ENTERPRISE            PlanType = 2
 )
 
 // Enum value maps for PlanType.
@@ -36,14 +36,14 @@ var (
 	PlanType_name = map[int32]string{
 		0: "PLAN_TYPE_UNSPECIFIED",
 		1: "FREE",
-		2: "PRO",
-		3: "ENTERPRISE",
+		3: "PRO",
+		2: "ENTERPRISE",
 	}
 	PlanType_value = map[string]int32{
 		"PLAN_TYPE_UNSPECIFIED": 0,
 		"FREE":                  1,
-		"PRO":                   2,
-		"ENTERPRISE":            3,
+		"PRO":                   3,
+		"ENTERPRISE":            2,
 	}
 )
 
