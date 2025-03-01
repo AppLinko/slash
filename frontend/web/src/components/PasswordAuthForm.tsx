@@ -58,7 +58,7 @@ const PasswordAuthForm = () => {
             className="w-full py-3"
             type="email"
             value={email}
-            placeholder="slash@yourselfhosted.com"
+            placeholder="输入你的邮箱..."
             onChange={handleEmailInputChanged}
           />
         </div>
