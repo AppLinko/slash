@@ -14,11 +14,11 @@ import (
 	"github.com/pkg/errors"
 	"google.golang.org/protobuf/encoding/protojson"
 
-	"github.com/AppLinko/slash/internal/util"
-	storepb "github.com/AppLinko/slash/proto/gen/store"
-	"github.com/AppLinko/slash/server/common"
-	"github.com/AppLinko/slash/server/profile"
-	"github.com/AppLinko/slash/store"
+	"github.com/yourselfhosted/slash/internal/util"
+	storepb "github.com/yourselfhosted/slash/proto/gen/store"
+	"github.com/yourselfhosted/slash/server/common"
+	"github.com/yourselfhosted/slash/server/profile"
+	"github.com/yourselfhosted/slash/store"
 )
 
 //go:embed dist

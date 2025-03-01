@@ -12,14 +12,14 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/pkg/errors"
 
-	storepb "github.com/AppLinko/slash/proto/gen/store"
-	"github.com/AppLinko/slash/server/profile"
-	apiv1 "github.com/AppLinko/slash/server/route/api/v1"
-	"github.com/AppLinko/slash/server/route/frontend"
-	licensern "github.com/AppLinko/slash/server/runner/license"
-	"github.com/AppLinko/slash/server/runner/version"
-	"github.com/AppLinko/slash/server/service/license"
-	"github.com/AppLinko/slash/store"
+	storepb "github.com/yourselfhosted/slash/proto/gen/store"
+	"github.com/yourselfhosted/slash/server/profile"
+	apiv1 "github.com/yourselfhosted/slash/server/route/api/v1"
+	"github.com/yourselfhosted/slash/server/route/frontend"
+	licensern "github.com/yourselfhosted/slash/server/runner/license"
+	"github.com/yourselfhosted/slash/server/runner/version"
+	"github.com/yourselfhosted/slash/server/service/license"
+	"github.com/yourselfhosted/slash/store"
 )
 
 type Server struct {

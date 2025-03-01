@@ -5,8 +5,8 @@ import (
 	"log/slog"
 	"time"
 
-	"github.com/AppLinko/slash/server/service/license"
-	"github.com/AppLinko/slash/store"
+	"github.com/yourselfhosted/slash/server/service/license"
+	"github.com/yourselfhosted/slash/store"
 )
 
 type Runner struct {

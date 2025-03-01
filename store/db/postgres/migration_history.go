@@ -3,7 +3,7 @@ package postgres
 import (
 	"context"
 
-	"github.com/AppLinko/slash/store"
+	"github.com/yourselfhosted/slash/store"
 )
 
 func (d *DB) UpsertMigrationHistory(ctx context.Context, upsert *store.UpsertMigrationHistory) (*store.MigrationHistory, error) {

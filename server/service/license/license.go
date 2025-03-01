@@ -10,11 +10,11 @@ import (
 	"github.com/pkg/errors"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	v1pb "github.com/AppLinko/slash/proto/gen/api/v1"
-	storepb "github.com/AppLinko/slash/proto/gen/store"
-	"github.com/AppLinko/slash/server/profile"
-	"github.com/AppLinko/slash/server/service/license/lemonsqueezy"
-	"github.com/AppLinko/slash/store"
+	v1pb "github.com/yourselfhosted/slash/proto/gen/api/v1"
+	storepb "github.com/yourselfhosted/slash/proto/gen/store"
+	"github.com/yourselfhosted/slash/server/profile"
+	"github.com/yourselfhosted/slash/server/service/license/lemonsqueezy"
+	"github.com/yourselfhosted/slash/store"
 )
 
 //go:embed slash.public.pem

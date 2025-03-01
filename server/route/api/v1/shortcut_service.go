@@ -15,10 +15,10 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	v1pb "github.com/AppLinko/slash/proto/gen/api/v1"
-	storepb "github.com/AppLinko/slash/proto/gen/store"
-	"github.com/AppLinko/slash/server/service/license"
-	"github.com/AppLinko/slash/store"
+	v1pb "github.com/yourselfhosted/slash/proto/gen/api/v1"
+	storepb "github.com/yourselfhosted/slash/proto/gen/store"
+	"github.com/yourselfhosted/slash/server/service/license"
+	"github.com/yourselfhosted/slash/store"
 )
 
 func (s *APIV1Service) ListShortcuts(ctx context.Context, _ *v1pb.ListShortcutsRequest) (*v1pb.ListShortcutsResponse, error) {

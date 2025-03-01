@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/AppLinko/slash/internal/cron"
+	"github.com/yourselfhosted/slash/internal/cron"
 )
 
 func TestNewMoment(t *testing.T) {

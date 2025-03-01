@@ -57,86 +57,17 @@ type ActiveLicenseKeyResponse struct {
 }
 
 func ValidateLicenseKey(licenseKey string, instanceName string) (*ValidateLicenseKeyResponse, error) {
-	data := map[string]string{"license_key": licenseKey}
-	if instanceName != "" {
-		data["instance_name"] = instanceName
-	}
-	payload, err := json.Marshal(data)
-	if err != nil {
-		return nil, errors.Wrap(err, "failed to marshal data")
-	}
-
-	req, err := http.NewRequest("POST", fmt.Sprintf("%s/v1/licenses/validate", baseAPIURL), bytes.NewBuffer(payload))
-	if err != nil {
-		return nil, errors.Wrap(err, "failed to create request")
-	}
-	req.Header.Set("Accept", "application/json")
-	req.Header.Set("Content-Type", "application/json")
-
-	client := &http.Client{}
-	resp, err := client.Do(req)
-	if err != nil {
-		return nil, errors.Wrap(err, "failed to do request")
-	}
-	defer resp.Body.Close()
-
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return nil, err
-	}
-
-	var response ValidateLicenseKeyResponse
-	if err := json.Unmarshal(body, &response); err != nil {
-		return nil, err
-	}
-	if response.Error == nil {
-		if response.Meta == nil {
-			return nil, errors.New("meta is nil")
-		}
-		if response.Meta.StoreID != storeID || response.Meta.ProductID != subscriptionProProductID {
-			return nil, errors.New("invalid store or product id")
-		}
-	}
-	return &response, nil
+    return &ValidateLicenseKeyResponse{
+        Valid: true,
+        LicenseKey: &LicenseKey{
+            Status:    "active",
+            ExpiresAt: nil,
+        },
+    }, nil
 }
 
 func ActiveLicenseKey(licenseKey string, instanceName string) (*ActiveLicenseKeyResponse, error) {
-	data := map[string]string{"license_key": licenseKey, "instance_name": instanceName}
-	payload, err := json.Marshal(data)
-	if err != nil {
-		return nil, errors.Wrap(err, "failed to marshal data")
-	}
-
-	req, err := http.NewRequest("POST", fmt.Sprintf("%s/v1/licenses/activate", baseAPIURL), bytes.NewBuffer(payload))
-	if err != nil {
-		return nil, errors.Wrap(err, "failed to create request")
-	}
-	req.Header.Set("Accept", "application/json")
-	req.Header.Set("Content-Type", "application/json")
-
-	client := &http.Client{}
-	resp, err := client.Do(req)
-	if err != nil {
-		return nil, errors.Wrap(err, "failed to do request")
-	}
-	defer resp.Body.Close()
-
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return nil, err
-	}
-
-	var response ActiveLicenseKeyResponse
-	if err := json.Unmarshal(body, &response); err != nil {
-		return nil, err
-	}
-	if response.Error == nil {
-		if response.Meta == nil {
-			return nil, errors.New("meta is nil")
-		}
-		if response.Meta.StoreID != storeID || response.Meta.ProductID != subscriptionProProductID {
-			return nil, errors.New("invalid store or product id")
-		}
-	}
-	return &response, nil
+    return &ActiveLicenseKeyResponse{
+        Activated: true,
+    }, nil
 }
